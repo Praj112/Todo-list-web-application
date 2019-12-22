@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Todo list</title>
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/82e6195eae.js" crossorigin="anonymous"></script>
+        <link href="/assets/style.css" rel="stylesheet" type="text/css" />
+        <script src="/assets/todo-list.js"></script>
+    </head>
+    <body>
+        <h1>MY Todo list</h1>
+        <div id="todo-table">
+            <form>
+                <input type="text" name="item" placeholder="add new item" required />
+                <button type="submit">ADD ITEM</button>
+            </form>
+            <ul>
+                <% for(var i =0; i<todos.length; i++){ %> 
+                    <li><%= todos[i].item %></li>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+</html>
